@@ -1,0 +1,56 @@
+<h2>Register for the new year!</h2>
+<h3>Start by entering the following info</h3>
+<form method="get" action="a.asp">
+  <label> ID : </label>
+
+  <input
+    [(ngModel)]="vm.id"
+    name="id"
+    type="number"
+    maxlength="6"
+    max="99"
+    min="0"
+    size="20"
+  />
+  <br />
+
+  <label> Last Name : </label>
+
+  <input [(ngModel)]="vm.lastName" name="lastName" type="text" maxlength="6" />
+
+  <br />
+
+  <label> First Name : </label>
+
+  <input
+    [(ngModel)]="vm.firstName"
+    name="firstName"
+    type="text"
+    maxlength="12"
+  />
+  <br />
+
+  <label> Year of Graduation : </label>
+
+  <select [(ngModel)]="vm.yearOfGraduation"
+
+  name="yearOfGraduation"
+
+  >
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+  </select>
+
+  <br />
+
+  <!-- <input type="submit"> -->
+  <label> &nbsp; </label>
+
+  <button (click)="save()">Submit
+
+  </button>
+
+  {{ vm | json }}
+</form>
